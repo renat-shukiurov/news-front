@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.content{
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.content h1{
+    margin-bottom: 15px;
+}
+
+.text-content{
+    margin-bottom: 20px;
+}
+.wrapper{
+    max-width: 1140px;
+    width: 100%;
+}
+
+.login{
+    padding-top: 150px;
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.post{
+    display: flex;
+    padding: 16px;
+    border: 2px solid blue;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+
+.post__content{
+    margin-right: 10px;
+}
+
+.post__btns{
+    display: flex;
+}
+
+.post__btns button:first-child{
+    margin-right: 5px;
+}
+
+.post-enter{
+    transform: translateX(-350px);
+}
+
+.post-enter-active{
+    transform: translateX(0px);
+    transition: all 500ms ease-in;
+}
+
+.post-exit{
+    opacity: 1;
+}
+
+.post-exit-active{
+    transform: translateX(-350px);
+    transition: all 500ms ease-in;
+}
+
+.page__wrapper{
+    display: flex;
+    margin-top: 30px;
+}
+
+.page{
+    padding: 10px;
+    border: 1px solid #437de3;
+    cursor: pointer;
+}
+
+.page__current{
+    border: 2px solid green;
+    font-weight: bold;
+}
+
+.comments{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.comment-block{
+    max-width: 190px;
+    padding: 10px 5px 30px 5px;
+    border: 2px solid #437de3;
+    margin-right: 20px;
+    position: relative;
+}
+
+.comment-block h5{
+    margin-bottom: 10px;
+}
+.comment-block p{
+    font-size: 12px;
+}
+
+.comment-block b{
+    position: absolute;
+    font-style: italic;
+    bottom: 5px;
+    font-size: 10px;
+    right: 10px;
+}
+
+.navbar{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    background: lightblue;
+}
+
+.navbar__links{
+    margin-left: auto;
+}
+
+.navbar__links a{
+    text-decoration: none;
+    margin-right: 20px;
+    color: #437de3;
+    display: inline-block;
+}
+.navbar__links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #437de3;
+    transition: width .3s;
+}
+.navbar__links a:hover::after{
+    width: 100%;
+}
+.navbar__links a:last-child{
+    margin-right: 0;
+
+}
+
+@media (max-width: 767px){
+    .post{
+        flex-direction: column;
+    }
+    .post__content{
+        margin-bottom: 20px;
+    }
+    .content h1{
+        font-size: 1.5rem;
+    }
+}
